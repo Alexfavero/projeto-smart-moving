@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+SmartMoving 📦
+O SmartMoving é um organizador e calculador de orçamentos para mudanças residenciais. O projeto foi desenvolvido como um estudo aprofundado de React e TypeScript, focando na criação de interfaces dinâmicas, gerenciamento de estado e experiência do usuário (UX).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A ideia central é permitir que o usuário liste seus pertences por cômodo e defina faixas de preço (mínimo e máximo) baseadas em sua própria pesquisa, centralizando o planejamento financeiro em um único local.
 
-Currently, two official plugins are available:
+🚀 Tecnologias e Conceitos
+Este projeto utiliza o ecossistema moderno do React para garantir performance e tipagem segura:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+React 19: Uso de Hooks para gerenciamento de estado e ciclo de vida.
 
-## React Compiler
+TypeScript: Implementação de interfaces rigorosas para garantir a integridade dos dados entre componentes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tailwind CSS v4: Estilização baseada em utilitários, aplicando conceitos de design system (espaçamento, cores e tipografia).
 
-## Expanding the ESLint configuration
+Vite: Ferramenta de build otimizada para desenvolvimento rápido.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🏗️ Arquitetura de Dados
+O projeto aplica padrões de organização que facilitam a manutenção e o entendimento do fluxo de informações:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Modelagem de Dados: Estrutura baseada em Interfaces para as entidades ItemOrcamento e Comodo.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Presets Inteligentes: Uso de Record<string, string[]> (Dicionários) para criar um sistema de sugestões dinâmicas por ambiente.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Componentização: Divisão da interface em componentes menores e reutilizáveis, seguindo o princípio de responsabilidade única.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📋 Funcionalidades em Desenvolvimento
+[ ] Seleção de Cômodos: Lista dinâmica de ambientes com opção de personalização.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[ ] Autocomplete de Itens: Input inteligente que sugere móveis e utensílios conforme a digitação do usuário.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[ ] Cálculo Dinâmico: Soma automática dos valores mínimos e máximos conforme novos itens são adicionados ou editados.
+
+[ ] Design Responsivo: Interface adaptada para uso em dispositivos móveis e desktop com foco em produtividade.
+
+🧠 Aprendizados Relevantes
+Este projeto marca o aprofundamento em tópicos cruciais para o desenvolvimento Front-end:
+
+Manipulação de Arrays: Uso intensivo de .map(), .filter() e .reduce() para processar dados de orçamento.
+
+Estado Complexo: Gerenciamento de objetos aninhados (Objetos dentro de Arrays) no estado do React.
+
+Tipagem Avançada: Aplicação de Generics e Records do TypeScript para criar um catálogo de sugestões escalável.
