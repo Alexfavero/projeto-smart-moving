@@ -1,7 +1,11 @@
 export interface ItemOrcamento {
-  id: number;
+  id: string; 
   nome: string;
+  status: "comprado" | "pendente";
   quantidade: number;
-  valorMin: number;
-  valorMax: number;
+  valorVista: number;
+  parcelas: number;
+  valorTotalParcelado: number;
+  link?: string;
+  descricao?: string;
 }
