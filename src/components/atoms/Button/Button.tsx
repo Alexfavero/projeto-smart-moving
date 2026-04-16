@@ -10,11 +10,11 @@ export function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  // Estilos base que todos os botões compartilham (como uma fundação padrão)
+  // Estilos base botões
   const baseStyles =
     "px-4 py-2 rounded-lg font-medium transition-all active:scale-95 flex items-center justify-center gap-2";
 
-  // Estilos específicos de cada variante (o acabamento)
+  // Estilos específicos de cada variante
   const variants = {
     primary: "bg-brand-primary text-white hover:opacity-90 shadow-sm",
     ghost: "text-brand-muted hover:bg-zinc-100",

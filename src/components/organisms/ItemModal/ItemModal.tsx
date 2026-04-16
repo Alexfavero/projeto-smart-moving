@@ -1,6 +1,6 @@
-import { Typography } from "../atoms/Typography";
-import { Input } from "../atoms/Input";
-import { Button } from "../atoms/Button";
+import { Typography } from "../../atoms/Typography";
+import { Input } from "../../atoms/Input";
+import { Button } from "../../atoms/Button";
 import { X } from "lucide-react";
 
 interface ItemModalProps {

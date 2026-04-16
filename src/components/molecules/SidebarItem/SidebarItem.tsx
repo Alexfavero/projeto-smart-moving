@@ -1,6 +1,6 @@
 import type { LucideIcon } from "lucide-react";
-import { Icon } from "../atoms/Icon";
-import { Typography } from "../atoms/Typography";
+import { Icon } from "../../atoms/Icon";
+import { Typography } from "../../atoms/Typography";
 
 interface SidebarItemProps {
   icon: LucideIcon;
